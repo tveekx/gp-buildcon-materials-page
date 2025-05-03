@@ -1,925 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-  font-family:"Poppins",sans-serif;
-}
-html{
-  scroll-behavior: smooth;
-}
-img{
-  max-width:100%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  border-radius: 1cap;
-
-}
-.nav{
-  display:flex;
-  justify-content: space-between;
-  align-items:center;
-  width:100%;
-  padding:1rem 6.5rem;
-  background-color: #082340;
-  z-index:1;
-  position:fixed;
-}
-.nav h2{
-  color:#fff;
-  font-size: 1.7rem;
-}
-/* #logo{
-  height: 10;
-  width: 10;
-} */
-#item{
-  display:flex;
-  align-items: center;
-  list-style-type: none;
-  text-transform: uppercase;
-  font-size: 1rem;
-
-}
-#item li{
-  margin-right: 50px;
-}
-#item a{
-  text-decoration: none;
-  color:#fff;
-}
-#item li a:hover{
-  color:#2d6197;
-  cursor:pointer;
-}
-#bar{
-  background-color: #fff;
-  width:30px;
-  height:3px;
-  display:none;
-  position:relative;
-}
-#bar::after{
-  position: absolute;
-  content:" ";
-  background-color: #fff;
-  width:30px;
-  height:3px;
-  top:-12px;
-}
-#bar::before{
-  position:absolute;
-  content:" ";
-  background-color: #fff;
-  width:30px;
-  height:3px;
-  bottom:-12px;
-}
-#bar:hover{
-  cursor:pointer;
-}
-.back{
-  width:100%;
-  height:100vh;
-  background-image: url(Images/bg.jpg);
-  background-size:cover;
-  z-index: -1;
-}
-.overlay{
-  position: relative;
-  text-align: center;
-  background:#171819;
-  width:100%;
-  height:100%;
-  opacity:0.85;
-}
-.mid{
-  position:absolute;
-  text-align: center;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-}
-.mid p{
-  color:#7f8c8d;
-  font-size:1.3rem;
-  margin-bottom: 1.4rem;;
-}
-.mid h2{
-  color:#fff;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-.mid a{
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.mid .borderless{
-  color:#fff;
-  font-weight: 500;
-  padding:0.9rem 1.6rem;
-}
-.mid .borderless:hover{
-  color:#2d6197;
-}
-.mid .borderless:active{
-  font-size: 0.95rem;
-}
-.mid .bordered:hover{
-  background-color: #fff;
-  border:1px solid #fff;
-}
-.mid .bordered:active{
-  padding:0.8rem 1.4rem 0.9rem 1.6rem;
-}
-.mid .bordered{
-  color:#2d6197;
-  border:1px solid #2d6197;
-  font-weight: 500;
-  padding: 0.9rem 1.6rem;
-  border-radius:3px;
-}
-.details{
-  display: flex;
-  justify-content: space-between;
-  width:100%;
-  margin:0 auto;
-  /* max-width:1100px; */
-  padding: 8rem 15rem;
-  background-color: #171819;
-}
-.details div{
-  width:45%;
-}
-.details h3 ,h4, h5{
- color:#fff;
-}
-.details .one h3{
-  font-size:2.5rem;
-  padding-bottom:1.1rem;
-}
-.details .one h5{
-  font-size:1.3rem;
-  font-weight: 400;
-  padding-bottom: 1.2rem;
-}
-.details .one p{
-  color:#666266;
-  font-size: 1.2rem;
-  padding-bottom: 3rem;
-}
-.details .one a{
-  color:#fff;
-  background-color:#f13a11;
-  display:inline-block;
-  width:100%;
-  padding:1rem 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align:center;
-  border-radius:3px;
-}
-.details .one a:hover{
-  background-color: #fff;
-  color:#f13a11;
-}
-.details .two{
-  border-left:1px solid #666262;
-  padding-top:2rem;
-  padding-left:4rem;
-}
-.details .two h3{ 
- font-size: 2.5rem;
- margin-bottom: 1.1rem;
-}
-.details .two h4{
-  font-size:1.1rem;
-}
-.details .two p{
-  font-size:1.1rem;
-  color:#666262;
-  margin-bottom:0.8rem;
-}
-.things{
-  background-color: #f9f9f9;
-  padding:8rem;
-  display: flex;
-  justify-content: space-between;
-}
-.things .about{
-  width:39%;
-}
-.things .about h2{
-  color:#212529;
-  font-size:2.1rem;
-  padding-bottom: 1.8rem;
-}
-.things .about p{
-  color:#7f8c8d;
-  font-size:1.1rem;
-}
-.things .services{
-  width:57%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.things .services .team1{
-  width:45%;
-  height:auto;
-  box-sizing:border-box;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-/* .trainer .services .team1 img{
-  width:100%;
-  object-fit: contain;
-} */
-.teamDetails{
-  margin:0 16px 16px 16px;
-}
-.teamDetails h4{
-  color:#212529;
-  font-size: 1.9rem;
-  font-weight:900;
-}
-.class{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding:3rem 6rem 0rem 6rem;
-}
-.class .p{
-  font-size:1.3rem;
-  color:#7f8c8d;
-  padding-bottom:6px;
-  text-align: center;
-}
-.class .h2{
-  font-size:2.2rem;
-  color:#222;
-  font-weight: 700;
-  padding-bottom:2rem;
-}
-.classMenu{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:1rem 7rem;
-}
-.classMenu .team{
-  width:32%;
-  /* border:2px solid red; */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  padding:5px;
-}
-.name{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.1rem;;
-}
-.name .num{
-  background-color:#f13a11;
-  font-size:1.2rem;
-  padding:1rem;
-  border-radius:50%;
-}
-.name span{
-  font-weight: 700;
-}
-.teamDetails .pro{
-  margin-top:1rem;
-  font-size:1.1rem;
-  color:#7f8c8d;
-}
-.contact{
-  padding:8rem;
-  display:flex;
-  flex-direction: row;
-  justify-content:space-between;
-
-}
-.contact .form{
-  width:45%;
-}
-.contact .form .h2{
-  font-size:2rem;
-  color:#212529;
-  padding-bottom: 10px;
-  width:100%;
-}
-.contact .form .submit{
- display: flex;
- flex-direction: column; 
- justify-content: flex-start;
- align-items: flex-start;
-}
+*{ margin:0; padding:0; box-sizing: border-box; font-family:"Poppins",sans-serif}
+html{ scroll-behavior: smooth}
+img{ max-width:100%; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; border-radius: 1cap}
+.nav{ display:flex; justify-content: space-between; align-items:center; width:100%; padding:1rem 6.5rem; background-color: #082340; z-index:1; position:fixed}
+.nav h2{ color:#fff; font-size: 1.7rem}
+/* #logo{ height: 10; width: 10} */
+#item{ display:flex; align-items: center; list-style-type: none; text-transform: uppercase; font-size: 1rem}
+#item li{ margin-right: 50px}
+#item a{ text-decoration: none; color:#fff}
+#item li a:hover{ color:#2d6197; cursor:pointer}
+#bar{ background-color: #fff; width:30px; height:3px; display:none; position:relative}
+#bar::after{ position: absolute; content:" "; background-color: #fff; width:30px; height:3px; top:-12px}
+#bar::before{ position:absolute; content:" "; background-color: #fff; width:30px; height:3px; bottom:-12px}
+#bar:hover{ cursor:pointer}
+.back{ width:100%; height:100vh; background-image: url(Images/bg.jpg); background-size:cover; z-index: -1}
+.overlay{ position: relative; text-align: center; background:#171819; width:100%; height:100%; opacity:0.85}
+.mid{ position:absolute; text-align: center; top:50%; left:50%; transform:translate(-50%,-50%)}
+.mid p{ color:#7f8c8d; font-size:1.3rem; margin-bottom: 1.4rem;}
+.mid h2{ color:#fff; font-size: 3rem; margin-bottom: 2rem}
+.mid a{ text-decoration: none; text-transform: uppercase}
+.mid .borderless{ color:#fff; font-weight: 500; padding:0.9rem 1.6rem}
+.mid .borderless:hover{ color:#2d6197}
+.mid .borderless:active{ font-size: 0.95rem}
+.mid .bordered:hover{ background-color: #fff; border:1px solid #fff}
+.mid .bordered:active{ padding:0.8rem 1.4rem 0.9rem 1.6rem}
+.mid .bordered{ color:#2d6197; border:1px solid #2d6197; font-weight: 500; padding: 0.9rem 1.6rem; border-radius:3px}
+.details{ display: flex; justify-content: space-between; width:100%; margin:0 auto; /* max-width:1100px; */ padding: 8rem 15rem; background-color: #171819}
+.details div{ width:45%}
+.details h3 ,h4, h5{ color:#fff}
+.details .one h3{ font-size:2.5rem; padding-bottom:1.1rem}
+.details .one h5{ font-size:1.3rem; font-weight: 400; padding-bottom: 1.2rem}
+.details .one p{ color:#666266; font-size: 1.2rem; padding-bottom: 3rem}
+.details .one a{ color:#fff; background-color:#f13a11; display:inline-block; width:100%; padding:1rem 0; text-decoration: none; text-transform: uppercase; text-align:center; border-radius:3px}
+.details .one a:hover{ background-color: #fff; color:#f13a11}
+.details .two{ border-left:1px solid #666262; padding-top:2rem; padding-left:4rem}
+.details .two h3{ font-size: 2.5rem; margin-bottom: 1.1rem}
+.details .two h4{ font-size:1.1rem}
+.details .two p{ font-size:1.1rem; color:#666262; margin-bottom:0.8rem}
+.things{ background-color: #f9f9f9; padding:8rem; display: flex; justify-content: space-between}
+.things .about{ width:39%}
+.things .about h2{ color:#212529; font-size:2.1rem; padding-bottom: 1.8rem}
+.things .about p{ color:#7f8c8d; font-size:1.1rem}
+.things .services{ width:57%; display: flex; justify-content: space-between; align-items: center}
+.things .services .team1{ width:45%; height:auto; box-sizing:border-box; background-color: #fff; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px}
+/* .trainer .services .team1 img{ width:100%; object-fit: contain} */
+.teamDetails{ margin:0 16px 16px 16px}
+.teamDetails h4{ color:#212529; font-size: 1.9rem; font-weight:900}
+.class{ display: flex; flex-direction: column; justify-content: center; align-items: center; padding:3rem 6rem 0rem 6rem}
+.class .p{ font-size:1.3rem; color:#7f8c8d; padding-bottom:6px; text-align: center}
+.class .h2{ font-size:2.2rem; color:#222; font-weight: 700; padding-bottom:2rem}
+.classMenu{ display:flex; justify-content: space-between; align-items: center; padding:1rem 7rem}
+.classMenu .team{ width:32%; /* border:2px solid red; */ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; padding:5px}
+.name{ display:flex; justify-content: space-between; align-items: center; font-size: 1.1rem;}
+.name .num{ background-color:#f13a11; font-size:1.2rem; padding:1rem; border-radius:50%}
+.name span{ font-weight: 700}
+.teamDetails .pro{ margin-top:1rem; font-size:1.1rem; color:#7f8c8d}
+.contact{ padding:8rem; display:flex; flex-direction: row; justify-content:space-between}
+.contact .form{ width:45%}
+.contact .form .h2{ font-size:2rem; color:#212529; padding-bottom: 10px; width:100%}
+.contact .form .submit{ display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start}
 .contact .form .submit input,.contact .form .submit textarea{
-width:100%;
-padding: 1rem;
-border:1px solid #95a5a6;
-outline:none;
-margin:13px 0;
-}
-.contact .form .submit input:focus,.contact .form .submit textarea:focus{
-  border:1px solid #111;
-}
-.contact .form .submit input::placeholder{
-  color:#7f8c8d;
-  font-size:1.1rem;
-}
-.contact .form .submit textarea::placeholder{
-  color:#7f8c8d;
-  font-size:1.1rem;
-}
-.contact .form .submit a{
   width:100%;
-  padding:15px 0px;
-  font-size: 1.1rem;
-  margin:13px 0px;
-  text-decoration: none;
-  background-color: #111;
-  color:#fff;
-  border-radius: 3px;
-  text-align: center;
-}
-.contact .map{
-  width:45%;
-}
-.contact .map h2{
-  font-size:2rem;
-  color:#212529;
-  padding-bottom: 10px;
-  width:100%;
-}
-.contact .map p{
-  font-size:1.1rem;
-  padding-bottom: 30px;
-}
-.contact .map iframe{
-  width:100%;
-}
-
-.footer{
-  border-top:1px solid #ecf0ec;
-  padding:5rem 8rem;
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  color:#7f8c8d;
-}
-
-.backToTop{
-  
-  font-size: 40px;
-  background-color: #2d6197;
-  color: white;
-  border-radius: 50%;
-}
-#backTotop{
-  position: absolute;
-  right: 40px;
-}
-@media screen and (max-width:1042px){
-  .nav{
-    padding:1rem 4.5rem;
-    
-  }
-  .nav h2{
-    /* color:#fff; */
-    font-size: 1.4rem;
-  }
-  
-  #item li{
-    margin-right: 30px;
-  }
-  #item a{
-   font-size:0.9rem;
-  }
-}
-
-
-@media(max-width:991px){
-  .nav{
-    padding:1rem 3rem;
-    
-  }
-  .nav h2{
-    /* color:#fff; */
-    font-size: 1.6rem;
-  }
-  #item{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width:250px;
-    height:60vh;
-    position:fixed;
-    top:0;
-    right:-250px;
-    background: rgba(0,0,0,0.8);
-    z-index: 100;
-    margin-top: 4.37rem;
-    transition: 0.5s;
-  }
-  #item li{
-    padding:6px 0px;
-    width:100%;
-    margin-right: 0;
-  }
-  #item li:hover{
-    border:1px solid #f13a11;
-  }
-  #item a{
-   font-size:1.2rem;
-  }
-  #bar{
-    display:block;
-  }
-
-  .mid{
-    position:absolute;
-    text-align: center;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-  }
-  .mid p{
-    color:#7f8c8d;
-    font-size:1.1rem;
-    margin-bottom: 1.2rem;;
-  }
-  .mid h2{
-    font-size: 2.5rem;
-  }
-  .mid a{
-    font-size: 0.9rem;
-    
-  }
-  .mid .borderless{
-    
-    padding:0.7rem 1.4rem;
-  }
-  .mid .borderless:active{
-    font-size: 0.85rem;
-  }
-  .mid .bordered:active{
-    padding:0.6rem 1.4rem 0.7rem 1.3rem;
-  }
-  .mid .bordered{
-    padding: 0.7rem 1.4rem;
-    border-radius:3px;
-  }
-
-  .details{
-    
-    padding: 6rem 7rem;
-  }
-  .details div{
-    width:50%;
-  }
-  .details h3 ,h4, h5{
-   color:#fff;
-  }
-  .details .one h3{
-    font-size:2rem;
-    padding-bottom:1rem;
-  }
-  .details .one p{
-    
-    font-size: 1.1rem;
-    padding-bottom: 2.2rem;
-  }
-  .details .one a{
-    font-size:0.9rem;
-    padding:0.7rem 0;
-    
-  }
-  
-  .details .two{
-    
-    padding-left:3.5rem;
-    margin-left:2rem;
-  }
-  .details .two h3{ 
-   font-size: 2rem;
-   /* margin-bottom: 1.1rem; */
-  }
-  .details .two h4{
-    font-size:1rem;
-  }
-  .details .two p{
-    font-size:1rem;
-    color:#666262;
-    margin-bottom:0.6rem;
-  }
-  
-
-  .things{
-    /* background-color: #f9f9f9; */
-    padding:4rem 5rem;
-    /* display: flex; */
-  }
-  .things .about{
-    width:39%;
-  }
-  .things .about h2{
-    color:#212529;
-    font-size:2rem;
-    padding-bottom: 1.4rem;
-  }
-  .things .about p{
-   
-    font-size:1rem;
-  }
-  
-  .things .services .team1{
-    width:48%; 
-  }
-  .teamDetails{
-    margin:0 0.7rem 0.7rem 0.7rem;
-  }
-  .teamDetails h4{
-    color:#212529;
-    font-size: 1.5rem;
-    font-weight:900;
-  }
-  .teamDetails p{
-    font-size:0.9rem;
-  }
-
-
-  .class{
-    
-    padding:3rem 6rem 0rem 6rem;
-  }
-  .class .p{
-    font-size:1.1rem;
-    padding-bottom:4px;
-  }
-  .class .h2{
-    font-size:2rem;
-    padding-bottom:1.8rem;
-  }
-  .classMenu{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:1rem 3rem;
-  }
-  .classMenu .team{
-    width:32%;
-    /* border:2px solid red; */
-  }
-  
-  .name{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;;
-  }
-  .name .num{
-    background-color:#f13a11;
-    font-size:1.2rem;
-    padding:1rem;
-    border-radius:50%;
-  }
-  .name h4{
-    font-size:1.5rem;
-  }
-  .name span{
-    font-weight: 700;
-  }
-  .teamDetails .pro{
-    font-size: 1rem;
-  }
-  .name .num{
-    font-size:1.2rem;
-    padding:0.8rem;
-    border-radius:50%;
-  }
-
-  .contact{
-    padding:4rem;
-  }
-  .contact .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width:47%;
-  }
-  .contact .form .h2{
-    font-size:1.5rem;
-    color:#212529;
-    padding-bottom: 10px;
-    width:100%;
-  }
-  .contact .form .submit input,.contact .form .submit textarea{
-  width:100%;
-  padding: 0.7rem;
+  padding: 1rem;
   border:1px solid #95a5a6;
   outline:none;
-  margin:8px 0;
-  }
-  .contact .form .submit input:focus,.contact .form .submit textarea:focus{
-    border:1px solid #111;
-  }
-  .contact .form .submit input::placeholder{
-    color:#7f8c8d;
-    font-size:0.8rem;
-  }
-  .contact .form .submit textarea::placeholder{
-    color:#7f8c8d;
-    font-size:0.8rem;
-  }
-  .contact .form .submit a{
-    padding:15px 0px;
-    font-size: 1rem;
-    margin:10px 0px;
-  }
-  .contact .map{
-    width:45%;
-
-  }
-  .contact .map h2{
-    font-size:1.6rem;
-    padding-bottom: 10px;
-  }
-  .contact .map p{
-    font-size:1.1rem;
-    padding-bottom: 30px;
-  }
-  .footer{
-    padding:6rem;
-  }
+margin:13px 0}
+.contact .form .submit input:focus,.contact .form .submit textarea:focus{ border:1px solid #111}
+.contact .form .submit input::placeholder{ color:#7f8c8d; font-size:1.1rem}
+.contact .form .submit textarea::placeholder{ color:#7f8c8d; font-size:1.1rem}
+.contact .form .submit a{ width:100%; padding:15px 0px; font-size: 1.1rem; margin:13px 0px; text-decoration: none; background-color: #111; color:#fff; border-radius: 3px; text-align: center}
+.contact .map{ width:45%}
+.contact .map h2{ font-size:2rem; color:#212529; padding-bottom: 10px; width:100%}
+.contact .map p{ font-size:1.1rem; padding-bottom: 30px}
+.contact .map iframe{ width:100%} .footer{ border-top:1px solid #ecf0ec; padding:5rem 8rem; display:flex; justify-content: space-between; align-items: center; color:#7f8c8d} .backToTop{ font-size: 40px; background-color: #2d6197; color: white; border-radius: 50%}
+#backTotop{ position: absolute; right: 40px}
+@media screen and (max-width:1042px){ .nav{ padding:1rem 4.5rem} .nav h2{ /* color:#fff; */ font-size: 1.4rem} #item li{ margin-right: 30px} #item a{ font-size:0.9rem}
+} @media(max-width:991px){ .nav{ padding:1rem 3rem} .nav h2{ /* color:#fff; */ font-size: 1.6rem} #item{ flex-direction: column; text-align: center; justify-content: center; align-items: center; width:250px; height:60vh; position:fixed; top:0; right:-250px; background: rgba(0,0,0,0.8); z-index: 100; margin-top: 4.37rem; transition: 0.5s} #item li{ padding:6px 0px; width:100%; margin-right: 0} #item li:hover{ border:1px solid #f13a11} #item a{ font-size:1.2rem} #bar{ display:block} .mid{ position:absolute; text-align: center; top:50%; left:50%; transform:translate(-50%,-50%)} .mid p{ color:#7f8c8d; font-size:1.1rem; margin-bottom: 1.2rem;} .mid h2{ font-size: 2.5rem} .mid a{ font-size: 0.9rem} .mid .borderless{ padding:0.7rem 1.4rem} .mid .borderless:active{ font-size: 0.85rem} .mid .bordered:active{ padding:0.6rem 1.4rem 0.7rem 1.3rem} .mid .bordered{ padding: 0.7rem 1.4rem; border-radius:3px} .details{ padding: 6rem 7rem} .details div{ width:50%} .details h3 ,h4, h5{ color:#fff} .details .one h3{ font-size:2rem; padding-bottom:1rem} .details .one p{ font-size: 1.1rem; padding-bottom: 2.2rem} .details .one a{ font-size:0.9rem; padding:0.7rem 0} .details .two{ padding-left:3.5rem; margin-left:2rem} .details .two h3{ font-size: 2rem; /* margin-bottom: 1.1rem; */ } .details .two h4{ font-size:1rem} .details .two p{ font-size:1rem; color:#666262; margin-bottom:0.6rem} .things{ /* background-color: #f9f9f9; */ padding:4rem 5rem; /* display: flex; */ } .things .about{ width:39%} .things .about h2{ color:#212529; font-size:2rem; padding-bottom: 1.4rem} .things .about p{ font-size:1rem} .things .services .team1{ width:48%} .teamDetails{ margin:0 0.7rem 0.7rem 0.7rem} .teamDetails h4{ color:#212529; font-size: 1.5rem; font-weight:900} .teamDetails p{ font-size:0.9rem} .class{ padding:3rem 6rem 0rem 6rem} .class .p{ font-size:1.1rem; padding-bottom:4px} .class .h2{ font-size:2rem; padding-bottom:1.8rem} .classMenu{ display:flex; justify-content: space-between; align-items: center; padding:1rem 3rem} .classMenu .team{ width:32%; /* border:2px solid red; */ } .name{ display:flex; justify-content: space-between; align-items: center; font-size: 0.8rem;} .name .num{ background-color:#f13a11; font-size:1.2rem; padding:1rem; border-radius:50%} .name h4{ font-size:1.5rem} .name span{ font-weight: 700} .teamDetails .pro{ font-size: 1rem} .name .num{ font-size:1.2rem; padding:0.8rem; border-radius:50%} .contact{ padding:4rem} .contact .form{ display: flex; flex-direction: column; justify-content: space-between; width:47%} .contact .form .h2{ font-size:1.5rem; color:#212529; padding-bottom: 10px; width:100%} .contact .form .submit input,.contact .form .submit textarea{ width:100%; padding: 0.7rem; border:1px solid #95a5a6; outline:none; margin:8px 0} .contact .form .submit input:focus,.contact .form .submit textarea:focus{ border:1px solid #111} .contact .form .submit input::placeholder{ color:#7f8c8d; font-size:0.8rem} .contact .form .submit textarea::placeholder{ color:#7f8c8d; font-size:0.8rem} .contact .form .submit a{ padding:15px 0px; font-size: 1rem; margin:10px 0px} .contact .map{ width:45%} .contact .map h2{ font-size:1.6rem; padding-bottom: 10px} .contact .map p{ font-size:1.1rem; padding-bottom: 30px} .footer{ padding:6rem}
+} @media(max-width:768px){ .back{ background-position: center} .things{ /* background-color: #f9f9f9; */ padding:3rem 3rem; /* display: flex; */ } .details{ padding: 3rem 3rem} .things .about{ width:40%} .things .about h2{ color:#212529; font-size:2rem; padding-bottom: 1.4rem} .things .about p{ font-size:1rem} .things .services .team1{ width:55%} .teamDetails{ margin:0 0.7rem 0.7rem 0.7rem} .teamDetails h4{ color:#212529; font-size: 1.5rem; font-weight:900} .teamDetails p{ font-size:0.9rem} .classMenu{ padding:2rem 2rem}
+} @media(max-width:596px){ .mid{ position:absolute; text-align: center; top:50%; left:50%; transform:translate(-50%,-50%)} .mid p{ color:#7f8c8d; font-size:1.1rem; margin-bottom: 1.2rem;} .mid h2{ font-size: 2rem} .mid a{ font-size: 0.9rem} .mid .borderless{ padding:0.7rem 1.4rem; display: block; margin-bottom: 1rem} .mid .borderless:active{ font-size: 0.85rem} .mid .bordered:active{ padding:0.6rem 1rem 0.7rem 1.1rem} .mid .bordered{ padding: 0.7rem 1rem; border-radius:3px} .details{ padding: 3rem 3rem; flex-direction: column; justify-content: center; align-items: center} .details div{ width:100%} .details h3 ,h4, h5{ color:#fff} .details .one{ padding-bottom:2rem} .details .one h3{ font-size:2rem; padding-bottom:1rem} .details .one p{ font-size: 1.05rem; padding-bottom: 2.2rem} .details .one a{ font-size:0.9rem; padding:0.7rem 0} .details .two{ padding-left:2rem; margin-left:1.5rem} .details .two h3{ font-size: 2rem; /* margin-bottom: 1.1rem; */ } .details .two h4{ font-size:1rem} .details .two p{ font-size:1rem; color:#666262; margin-bottom:0.6rem} .things{ /* background-color: #f9f9f9; */ padding:4rem 3rem; display: flex; flex-direction: column} .things .about{ width:100% } .things .about h2{ color:#212529; font-size:2rem; padding-bottom: 1.4rem} .things .about p{ font-size:1.1rem} .things .services{ width: 100%; display: flex; flex-direction: column; justify-content: space-around} .things .services .team1{ width:100%; margin-bottom:1rem} .teamDetails{ margin:0 0.7rem 0.7rem 0.7rem} .teamDetails h4{ color:#212529; font-size: 1.5rem; font-weight:900} .teamDetails p{ font-size:0.9rem} .class{ text-align: center; padding:3rem 6rem 0rem 6rem} .classMenu{ display:flex; flex-direction: column; justify-content: space-between; align-items: center; padding:1rem 3rem} .classMenu .team{ width:100%; /* border:2px solid red; */ margin-bottom: 1.2rem; margin:auto} .contact{ padding:3rem; flex-direction: column} .contact .form{ display: flex; flex-direction: column; justify-content: space-between; margin-bottom:1.1em; width:100%} .contact .map{ width:100%} .contact .form .h2{ font-size:1.5rem; color:#212529; padding-bottom: 10px; margin-bottom:1em; width:100%} .footer{ text-align: center; padding:4rem; gap:1.5em; flex-direction: column} } button { padding: 0.8em 1.8em; border: 2px solid #2d6197; position: relative; overflow: hidden; background-color: transparent; text-align: center; text-transform: uppercase; font-size: 16px; transition: .3s; z-index: 1; font-family: inherit; color: #2d6197} button::before { content: ''; width: 0; height: 300%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) ; background: #2d6197; transition: .5s ease; display: block; z-index: -1} button:hover::before { width: 105%} button:hover { color: white} .classMenu{ display: flex; justify-content: center; /* Center the cards horizontally */ gap: 20px; /* Add gap between the cards */ /* flex-wrap: wrap; Allow wrapping of cards if needed */ padding: 20px; /* Add padding to the container if needed */
 }
-
-@media(max-width:768px){
-
-  .back{
-    background-position: center;
-  }
-
-  .things{
-    /* background-color: #f9f9f9; */
-    padding:3rem 3rem;
-    /* display: flex; */
-  }
-  .details{
-    padding: 3rem 3rem;
-  }
-  .things .about{
-    width:40%;
-  }
-  .things .about h2{
-    color:#212529;
-    font-size:2rem;
-    padding-bottom: 1.4rem;
-  }
-  .things .about p{
-    font-size:1rem;
-  }
-  
-  .things .services .team1{
-    width:55%; 
-  }
-  .teamDetails{
-    margin:0 0.7rem 0.7rem 0.7rem;
-  }
-  .teamDetails h4{
-    color:#212529;
-    font-size: 1.5rem;
-    font-weight:900;
-  }
-  .teamDetails p{
-    font-size:0.9rem;
-  }
-  .classMenu{
-    padding:2rem 2rem;
-  }
+/* Add these styles to your existing CSS file */ /* Active navigation link styling */
+#item a.active { color: #2d6197; font-weight: 600; position: relative} #item a.active::after { content: ''; position: absolute; width: 100%; height: 2px; background-color: #2d6197; bottom: -5px; left: 0} /* Card hover effects */
+.team, .team1 { transition: all 0.3s ease} .card-hover { transform: translateY(-10px); box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px} /* Product image zoom effect */
+.team .img, .team1 .img { overflow: hidden} .team .img img, .team1 .img img { transition: transform 0.5s ease} .team:hover .img img, .team1:hover .img img { transform: scale(1.05)} /* Back to top button styling */
+#backTotop { opacity: 0; visibility: hidden; transition: all 0.3s ease} #backTotop.show { opacity: 1; visibility: visible} .backToTop { cursor: pointer; transition: transform 0.3s ease} .backToTop:hover { transform: translateY(-5px)} /* Form styling */
+.submit input, .submit textarea { transition: all 0.3s ease} .submit input:focus, .submit textarea:focus { transform: scale(1.01); box-shadow: 0 0 8px rgba(45, 97, 151, 0.5)} .error-input { border: 1px solid #ff3860 !important} .error-message { color: #ff3860; font-size: 0.8rem; margin-top: -10px; margin-bottom: 10px} .success-message { background-color: #23d160; color: white; padding: 10px; border-radius: 4px; margin-top: 10px; text-align: center; transition: opacity 0.5s ease} /* Loading spinner for form submission */
+.spinner { display: none; width: 30px; height: 30px; border: 3px solid #f3f3f3; border-top: 3px solid #2d6197; border-radius: 50%; animation: spin 1s linear infinite; margin: 10px auto} @keyframes spin { 0% { transform: rotate(0deg)} 100% { transform: rotate(360deg)}
+} /* Improved responsive styling */
+@media (max-width: 991px) { .mid h2 { font-size: 2.2rem; margin-bottom: 1.5rem} .nav h2 { font-size: 1.3rem} .details { padding: 5rem 5rem}
+} /* Add a counter section styling */
+.counter-section { background-color: #082340; color: white; padding: 3rem 0; text-align: center} .counter-container { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1200px; margin: 0 auto} .counter-item { padding: 1.5rem; margin: 1rem; min-width: 200px} .counter { font-size: 3rem; font-weight: bold; margin-bottom: 0.5rem; color: #2d6197} .counter-title { font-size: 1.2rem; color: #ccc} /* Product filter buttons */
+.filter-buttons { display: flex; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap} .filter-btn { padding: 0.5rem 1.2rem; margin: 0.5rem; background-color: transparent; border: 1px solid #2d6197; color: #2d6197; cursor: pointer; transition: all 0.3s ease} .filter-btn:hover, .filter-btn.active { background-color: #2d6197; color: white} /* Product animations */
+.product-enter { opacity: 0; transform: scale(0.9)} .product-enter-active { opacity: 1; transform: scale(1); transition: opacity 300ms, transform 300ms} .product-exit { opacity: 1} .product-exit-active { opacity: 0; transform: scale(0.9); transition: opacity 300ms, transform 300ms} /* Testimonial section */
+.testimonial-section { background-color: #f9f9f9; padding: 4rem 0; text-align: center} .testimonial-container { max-width: 800px; margin: 0 auto; position: relative} .testimonial { background-color: white; padding: 2rem; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: none} .testimonial.active { display: block; animation: fadeIn 0.5s ease} .testimonial-text { font-style: italic; margin-bottom: 1.5rem} .testimonial-author { font-weight: bold; color: #2d6197} .testimonial-nav { display: flex; justify-content: center; margin-top: 1.5rem} .testimonial-dot { width: 10px; height: 10px; background-color: #ccc; border-radius: 50%; margin: 0 5px; cursor: pointer; transition: background-color 0.3s ease} .testimonial-dot.active { background-color: #2d6197} @keyframes fadeIn { from { opacity: 0} to { opacity: 1}
+} /* Add these styles to your existing CSS file */ /* Animations */
+@keyframes float { 0%, 100% { transform: translateY(0)} 50% { transform: translateY(-15px)}
+} @keyframes pulse { 0% { transform: scale(1)} 50% { transform: scale(1.05)} 100% { transform: scale(1)}
+} @keyframes fadeIn { from { opacity: 0; transform: translateY(20px)} to { opacity: 1; transform: translateY(0)}
+} @keyframes spin { 0% { transform: rotate(0deg)} 100% { transform: rotate(360deg)}
+} /* Particles */
+.particles-container { position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; pointer-events: none; z-index: 1} .particle { position: absolute; background-color: rgba(255, 255, 255, 0.6); border-radius: 50%; pointer-events: none} /* Navbar enhancements */
+.nav { transition: background-color 0.3s ease, box-shadow 0.3s ease} .nav.scrolled { background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)} #item a { position: relative; overflow: hidden} #item a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #222; transition: width 0.3s ease} #item a:hover::after,
+#item a.active::after { width: 100%} /* Hero section enhancements */
+.back { position: relative; overflow: hidden} .mid { transition: opacity 0.5s ease, transform 0.5s ease} .mid h2 { animation: pulse 2s infinite} .scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); width: 30px; height: 50px; cursor: pointer; z-index: 10; opacity: 1; transition: opacity 0.3s ease} .scroll-arrow { position: absolute; top: 0; left: 50%; width: 24px; height: 24px; margin-left: -12px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); animation: scrollArrow 2s infinite; box-sizing: border-box} @keyframes scrollArrow { 0% { opacity: 0} 50% { opacity: 1} 100% { opacity: 0; transform: rotate(-45deg) translate(-20px, 20px)}
+} /* Counter enhancements */
+.counter-section { background: linear-gradient(45deg, #f1f1f1, #ffffff); padding: 50px 0; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)} .counter-item { transition: transform 0.3s ease} .counter-item:hover { transform: translateY(-10px)} .counter { font-weight: bold; color: #222; font-size: 2.5rem; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1)} .counter-title { font-size: 1.2rem; margin-top: 10px; color: #555} /* Card enhancements */
+.team, .team1 { transition: transform 0.3s ease, box-shadow 0.3s ease; backface-visibility: hidden} .team:hover, .team1:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15)} .team img, .team1 img { transition: transform 0.5s ease-in-out} .card-hover { position: relative; z-index: 10} .shine { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 100} /* Filter buttons */
+.filter-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px} .filter-btn { padding: 10px 20px; background: #f5f5f5; border: none; border-radius: 30px; cursor: pointer; transition: all 0.3s ease; font-weight: 500} .filter-btn:hover, .filter-btn.active { background: #222; color: white; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)} /* Testimonial enhancements */
+.testimonial-section { position: relative; overflow: hidden; padding: 60px 0; background-color: #f9f9f9} .testimonial { display: none; opacity: 0; transform: translateX(50px); transition: opacity 0.6s ease, transform 0.6s ease} .testimonial.active { display: block; opacity: 1; transform: translateX(0)} .testimonial.entrance { animation: slideInRight 0.6s ease forwards} .testimonial.exit { animation: slideOutLeft 0.6s ease forwards} @keyframes slideInRight { from { opacity: 0; transform: translateX(50px)} to { opacity: 1; transform: translateX(0)}
+} @keyframes slideOutLeft { from { opacity: 1; transform: translateX(0)} to { opacity: 0; transform: translateX(-50px)}
+} .testimonial-text { font-size: 1.2rem; line-height: 1.8; font-style: italic; position: relative; padding: 20px 30px; background-color: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08)} .testimonial-text::before { content: '\201C'; font-size: 4rem; position: absolute; left: 10px; top: -10px; color: rgba(0, 0, 0, 0.1)} .testimonial-author { text-align: right; font-weight: 600; margin-top: 10px; color: #555} .testimonial-dot { width: 12px; height: 12px; background-color: #ddd; border-radius: 50%; margin: 0 8px; cursor: pointer; transition: background-color 0.3s ease, transform 0.3s ease} .testimonial-dot.active { background-color: #222; transform: scale(1.2)} /* Form enhancements */
+.form input, .form textarea { transition: all 0.3s ease; border: 2px solid transparent; background-color: #f5f5f5} .form input:focus, .form textarea:focus { border-color: #222; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); transform: translateY(-2px)} .form button { position: relative; overflow: hidden; transition: all 0.3s ease} .form button::before { content: ''; position: absolute; left: -100%; top: 0; width: 100%; height: 100%; background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent); transition: all 0.6s ease} .form button:hover::before { left: 100%} .form button.success { background-color: #4CAF50} .check-icon { display: inline-block; animation: scale 0.5s ease} @keyframes scale { 0% { transform: scale(0)} 50% { transform: scale(1.5)} 100% { transform: scale(1)}
+} /* Spinner enhancement */
+.spinner { width: 40px; height: 40px; border: 4px solid rgba(0, 0, 0, 0.1); border-radius: 50%; border-top-color: #222; display: none; position: absolute; right: 20px; bottom: 20px} .spin-animation { animation: spin 1s linear infinite} /* Section animation */
+section, .details, .footer { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease} section.animated, .details.animated, .footer.animated { opacity: 1; transform: translateY(0)} .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease} section.animated .fade-in { opacity: 1; transform: translateY(0)} /* Back to top button enhancement */
+#backTotop { opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease} #backTotop.show { opacity: 1; transform: translateY(0)} /* Mobile responsive animations */
+@media (max-width: 768px) { .scroll-indicator { bottom: 20px} .counter-item { margin-bottom: 20px} .filter-btn { padding: 8px 15px; font-size: 0.9rem}
+} @media (max-width: 768px) { #about .things { flex-direction: column; padding: 0 1rem} #about .about, #about .services { width: 100%; margin-bottom: 2rem} #about .services { flex-direction: column} #about .team1 { width: 100%; margin-bottom: 1.5rem} #tservices .team { width: 100%}
 }
-
-@media(max-width:596px){
-  .mid{
-    position:absolute;
-    text-align: center;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-  }
-  .mid p{
-    color:#7f8c8d;
-    font-size:1.1rem;
-    margin-bottom: 1.2rem;;
-  }
-  .mid h2{
-    font-size: 2rem;
-  }
-  .mid a{
-    font-size: 0.9rem;
-    
-  }
-  .mid .borderless{
-    padding:0.7rem 1.4rem;
-    display: block;
-    margin-bottom: 1rem;
-  }
-  .mid .borderless:active{
-    font-size: 0.85rem;
-  }
-  .mid .bordered:active{
-    padding:0.6rem 1rem 0.7rem 1.1rem;
-  }
-  .mid .bordered{
-    padding: 0.7rem 1rem;
-    border-radius:3px;
-  }
-
-
-
-  .details{
-    
-    padding: 3rem 3rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .details div{
-    width:100%;
-  }
-  .details h3 ,h4, h5{
-   color:#fff;
-  }
-  .details .one{
-    padding-bottom:2rem;
-  }
-  .details .one h3{
-    font-size:2rem;
-    padding-bottom:1rem;
-  }
-  .details .one p{
-    
-    font-size: 1.05rem;
-    padding-bottom: 2.2rem;
-  }
-  .details .one a{
-    font-size:0.9rem;
-    padding:0.7rem 0; 
-  }
-  .details .two{
-    
-    padding-left:2rem;
-    margin-left:1.5rem;
-  }
-  .details .two h3{ 
-   font-size: 2rem;
-   /* margin-bottom: 1.1rem; */
-  }
-  .details .two h4{
-    font-size:1rem;
-  }
-  .details .two p{
-    font-size:1rem;
-    color:#666262;
-    margin-bottom:0.6rem;
-  }
-  
-
-
-  .things{
-    /* background-color: #f9f9f9; */
-    padding:4rem 3rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .things .about{
-    width:100%
-  }
-  .things .about h2{
-    color:#212529;
-    font-size:2rem;
-    padding-bottom: 1.4rem;
-  }
-  .things .about p{
-    font-size:1.1rem;
-  }
-  .things .services{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .things .services .team1{
-    width:100%;
-    margin-bottom:1rem;
-  }
-  .teamDetails{
-    margin:0 0.7rem 0.7rem 0.7rem;
-  }
-  .teamDetails h4{
-    color:#212529;
-    font-size: 1.5rem;
-    font-weight:900;
-  }
-  .teamDetails p{
-    font-size:0.9rem;
-  }
-
-
-  .class{
-    text-align: center;
-    padding:3rem 6rem 0rem 6rem;
-  }
-  .classMenu{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding:1rem 3rem;
-  }
-  .classMenu .team{
-    width:100%;
-    /* border:2px solid red; */
-    margin-bottom: 1.2rem;
-    margin:auto;
-  }
-  
-
-  .contact{
-    padding:3rem;
-    flex-direction: column;
-  }
-  .contact .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom:1.1em;
-    width:100%;
-  }
-  .contact .map{
-    width:100%;
-  }
-
-  .contact .form .h2{
-    font-size:1.5rem;
-    color:#212529;
-    padding-bottom: 10px;
-    margin-bottom:1em;
-    width:100%;
-  }
-
-  .footer{
-    text-align: center;
-    padding:4rem;
-    gap:1.5em;
-    flex-direction: column;
-  }
-
-}
-
-button {
-  padding: 0.8em 1.8em;
-  border: 2px solid #2d6197;
-  position: relative;
-  overflow: hidden;
-  background-color: transparent;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 16px;
-  transition: .3s;
-  z-index: 1;
-  font-family: inherit;
-  color: #2d6197;
- }
- 
- button::before {
-  content: '';
-  width: 0;
-  height: 300%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) ;
-  background: #2d6197;
-  transition: .5s ease;
-  display: block;
-  z-index: -1;
- }
- 
- button:hover::before {
-  width: 105%;
- }
- 
- button:hover {
-  color: white;
- }
- 
-.classMenu{
-  display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  gap: 20px; /* Add gap between the cards */
-  /* flex-wrap: wrap; Allow wrapping of cards if needed */
-  padding: 20px; /* Add padding to the container if needed */
-}
+/* Services Section Styling */
+#tservices { background-color: #f9f9f9; padding: 4rem 0} #tservices .class { text-align: center; margin-bottom: 2rem} #tservices .classMenu { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; padding: 0 2rem} #tservices .team { background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; width: 45%; margin-bottom: 20px} #tservices .team:hover { transform: translateY(-10px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)} #tservices .team img { border-radius: 10px 10px 0 0; width: 100%; height: 200px; object-fit: cover} #tservices .teamDetails { padding: 1rem; text-align: center} #tservices .teamDetails h4 { font-size: 1.5rem; color: #2d6197; margin-bottom: 0.5rem} #tservices .teamDetails p { font-size: 1rem; color: #666} /* About Section Styling */
+#about { background-color: #f9f9f9; padding: 4rem 0} #about .things { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem} #about .about { width: 50%} #about .about h2 { font-size: 2.5rem; color: #2d6197; margin-bottom: 1.5rem} #about .about p { font-size: 1.1rem; color: #666; line-height: 1.8} #about .services { width: 45%; display: flex; justify-content: space-between} #about .team1 { background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; width: 48%} #about .team1:hover { transform: translateY(-10px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)} #about .team1 img { border-radius: 10px 10px 0 0; width: 100%; height: 200px; object-fit: cover} #about .teamDetails { padding: 1rem; text-align: center} #about .teamDetails h4 { font-size: 1.5rem; color: #2d6197; margin-bottom: 0.5rem} #about .teamDetails p { font-size: 1rem; color: #666}
