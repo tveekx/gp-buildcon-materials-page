@@ -459,8 +459,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Add parallax effect to hero content
       if (midContent) {
-        midContent.style.transform = `translateY(${scrollPosition * 0.2}px)`;
         midContent.style.opacity = 1 - (scrollPosition * 0.003);
+        if (scrollPosition < 10) {
+          midContent.style.opacity = 1;
+        }
       }
     }
   });
