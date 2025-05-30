@@ -33,10 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
+        targetElement.scrollIntoView({ behavior: 'smooth' });
         }
       }
     });
@@ -209,8 +206,6 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorPlacement: 'top-bottom'
   });
 });
-
-// Add these features to your script.js file after the existing code
 
 // Product filtering functionality
 function setupProductFilters() {
